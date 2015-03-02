@@ -32,8 +32,9 @@ public class MainActivity extends ActionBarActivity {
             @Override
             protected Void doInBackground(Void... params) {
 
-
-                PlayStoreApi.test("com.google.android.gm", new Display() {
+//                AndroidMarketApi (needs sign in)
+//                PlayStoreApi
+                        AndroidQuery.test("com.google.android.gm", new Display() {
                     @Override
                     public void call(final String text) {
                         runOnUiThread(new Runnable() {
@@ -45,6 +46,7 @@ public class MainActivity extends ActionBarActivity {
                         );
                     }
                 });
+
                 return null;
             }
         }.execute();
